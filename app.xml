@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<board type="Arduino Nano" name="app">
+    <info>
+        A puzzle based on RFID cards triggering individual relays
+    </info>
+
+    <devices>
+        <device name="Relay 1" type="Digital Output">
+            <setting id="pin" name="Output" value="6"/>
+        </device>
+        <device name="Relay 2" type="Digital Output">
+            <setting id="pin" name="Output" value="7"/>
+        </device>
+        <device name="Relay 3" type="Digital Output">
+            <setting id="pin" name="Output" value="8"/>
+        </device>
+        <device name="Relay 4" type="Digital Output">
+            <setting id="pin" name="Output" value="9"/>
+        </device>
+        <device name="Relay 5" type="Digital Output">
+            <setting id="pin" name="Output" value="10"/>
+        </device>
+    </devices>
+
+    <parameters>
+        <parameter name="On time" type="Integer">
+            <setting id="init_value" value="3000"/>
+            <setting id="use_eeprom" value="true"/>
+        </parameter>
+
+        <parameter name="Program RFID" type="Integer">
+            <setting id="init_value" value="0"/>
+            <setting id="use_eeprom" value="false"/>
+        </parameter>
+    </parameters>
+
+    <modules>
+        <module>Oneshot Timer</module>
+    </modules>
+    
+    <custom_code>
+        <file>application.cpp</file>
+    </custom_code>
+
+    <logging>
+        <log_module>APPLICATION</log_module>
+    </logging>
+
+    <adl protocol="url"></adl>
+
+</board>
