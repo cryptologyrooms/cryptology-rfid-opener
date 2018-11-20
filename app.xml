@@ -7,19 +7,23 @@
 
     <devices>
         <device name="Relay 1" type="Digital Output">
-            <setting id="pin" name="Output" value="6"/>
+            <setting id="pin" name="Output" value="3"/>
         </device>
         <device name="Relay 2" type="Digital Output">
-            <setting id="pin" name="Output" value="7"/>
+            <setting id="pin" name="Output" value="4"/>
         </device>
         <device name="Relay 3" type="Digital Output">
-            <setting id="pin" name="Output" value="8"/>
+            <setting id="pin" name="Output" value="5"/>
         </device>
         <device name="Relay 4" type="Digital Output">
-            <setting id="pin" name="Output" value="9"/>
+            <setting id="pin" name="Output" value="6"/>
         </device>
         <device name="Relay 5" type="Digital Output">
-            <setting id="pin" name="Output" value="10"/>
+            <setting id="pin" name="Output" value="7"/>
+        </device>
+        <device name="RFID" type="RFID RC522">
+            <setting id="ss" value="10"/>
+            <setting id="rst" value="9"/>
         </device>
     </devices>
 
@@ -32,6 +36,27 @@
         <parameter name="Program RFID" type="Integer">
             <setting id="init_value" value="0"/>
             <setting id="use_eeprom" value="false"/>
+        </parameter>
+
+        <parameter name="RFID1" type="String">
+            <setting id="length" value="20"/>
+            <setting id="use_eeprom" value="true"/>
+        </parameter>
+        <parameter name="RFID2" type="String">
+            <setting id="length" value="20"/>
+            <setting id="use_eeprom" value="true"/>
+        </parameter>
+        <parameter name="RFID3" type="String">
+            <setting id="length" value="20"/>
+            <setting id="use_eeprom" value="true"/>
+        </parameter>
+        <parameter name="RFID4" type="String">
+            <setting id="length" value="20"/>
+            <setting id="use_eeprom" value="true"/>
+        </parameter>
+        <parameter name="RFID5" type="String">
+            <setting id="length" value="20"/>
+            <setting id="use_eeprom" value="true"/>
         </parameter>
     </parameters>
 
